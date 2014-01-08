@@ -16,7 +16,7 @@
 
 // http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/
 
-- (void)testDimensions
+- (void)testResolutions
 {
     TMKDesignCheatSheet *iPhone5 = TMKDesignCheatSheet.iPhone5;
     XCTAssertEqual(iPhone5.portrait.width,   640.0f);
@@ -88,6 +88,53 @@
     XCTAssertEqual(iPadRetina.display.colorTemperature, @"Warm");
     XCTAssertEqual(iPadMini.display.colorTemperature,   @"Unknown");
     XCTAssertEqual(iPad.display.colorTemperature,       @"Warm");
+}
+
+- (void)testIcons
+{
+    TMKDesignCheatSheet *iPhone5    = TMKDesignCheatSheet.iPhone5;
+    TMKDesignCheatSheet *iPhone4S   = TMKDesignCheatSheet.iPhone4S;
+    TMKDesignCheatSheet *iPhone4    = TMKDesignCheatSheet.iPhone4;
+    TMKDesignCheatSheet *iPhone     = TMKDesignCheatSheet.iPhone;
+    TMKDesignCheatSheet *iPadRetina = TMKDesignCheatSheet.iPadRetina;
+    TMKDesignCheatSheet *iPadMini   = TMKDesignCheatSheet.iPadMini;
+    TMKDesignCheatSheet *iPad       = TMKDesignCheatSheet.iPad;
+
+    // App Icon
+    XCTAssertEqual(iPhone5.appIconSize.width,    120.0f);
+    XCTAssertEqual(iPhone4S.appIconSize.width,   120.0f);
+    XCTAssertEqual(iPhone4.appIconSize.width,    120.0f);
+    XCTAssertEqual(iPhone.appIconSize,           nil);  // Not supported
+    XCTAssertEqual(iPadRetina.appIconSize.width, 152.0f);
+    XCTAssertEqual(iPadMini.appIconSize.width,    76.0f);
+    XCTAssertEqual(iPad.appIconSize.width,        76.0f);
+
+    // AppStore Icon
+    XCTAssertEqual(iPhone5.appStoreIconSize.width,    1024.0f);
+    XCTAssertEqual(iPhone4S.appStoreIconSize.width,   1024.0f);
+    XCTAssertEqual(iPhone4.appStoreIconSize.width,    1024.0f);
+    XCTAssertEqual(iPhone.appStoreIconSize,           nil);  // Not supported
+    XCTAssertEqual(iPadRetina.appStoreIconSize.width, 1024.0f);
+    XCTAssertEqual(iPadMini.appStoreIconSize.width,    512.0f);
+    XCTAssertEqual(iPad.appStoreIconSize.width,        512.0f);
+    
+    // Spotlight Icon
+    XCTAssertEqual(iPhone5.spotlightIconSize.width,    80.0f);
+    XCTAssertEqual(iPhone4S.spotlightIconSize.width,   80.0f);
+    XCTAssertEqual(iPhone4.spotlightIconSize.width,    80.0f);
+    XCTAssertEqual(iPhone.spotlightIconSize,           nil);  // Not supported
+    XCTAssertEqual(iPadRetina.spotlightIconSize.width, 80.0f);
+    XCTAssertEqual(iPadMini.spotlightIconSize.width,   40.0f);
+    XCTAssertEqual(iPad.spotlightIconSize.width,       40.0f);
+    
+    // Settings Icon
+    XCTAssertEqual(iPhone5.spotlightIconSize.width,    58.0f);
+    XCTAssertEqual(iPhone4S.spotlightIconSize.width,   58.0f);
+    XCTAssertEqual(iPhone4.spotlightIconSize.width,    58.0f);
+    XCTAssertEqual(iPhone.spotlightIconSize,           nil);  // Not supported
+    XCTAssertEqual(iPadRetina.spotlightIconSize.width, 58.0f);
+    XCTAssertEqual(iPadMini.spotlightIconSize.width,   29.0f);
+    XCTAssertEqual(iPad.spotlightIconSize.width,       29.0f);
 }
 
 - (void)test

@@ -28,6 +28,10 @@
 @property (readonly) TMKDesignCheatSheetDimension *portrait;
 @property (readonly) TMKDesignCheatSheetDimension *landscape;
 @property (readonly) TMKDesignCheatSheetDisplay *display;
+@property (readonly) TMKDesignCheatSheetDimension *appIconSize;
+@property (readonly) TMKDesignCheatSheetDimension *appStoreIconSize;
+@property (readonly) TMKDesignCheatSheetDimension *spotlightIconSize;
+@property (readonly) TMKDesignCheatSheetDimension *settingsIconSize;
 
 //
 + (TMKDesignCheatSheet *)iPhone5;
