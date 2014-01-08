@@ -61,4 +61,23 @@
     XCTAssertEqual(iPad.landscape.height,  768.0f);
 }
 
+- (void)test
+{
+    TMKDesignCheatSheet *iPhone5    = TMKDesignCheatSheet.iPhone5;
+    TMKDesignCheatSheet *iPhone4S   = TMKDesignCheatSheet.iPhone4S;
+    TMKDesignCheatSheet *iPhone4    = TMKDesignCheatSheet.iPhone4;
+    TMKDesignCheatSheet *iPhone     = TMKDesignCheatSheet.iPhone;
+    TMKDesignCheatSheet *iPadRetina = TMKDesignCheatSheet.iPadRetina;
+    TMKDesignCheatSheet *iPadMini   = TMKDesignCheatSheet.iPadMini;
+    TMKDesignCheatSheet *iPad       = TMKDesignCheatSheet.iPad;
+    
+    XCTAssertEqual(iPhone5,    nil);
+    XCTAssertEqual(iPhone4S,   nil);
+    XCTAssertEqual(iPhone4,    nil);
+    XCTAssertEqual(iPhone,     nil);
+    XCTAssertEqual(iPadRetina, nil);
+    XCTAssertEqual(iPadMini,   nil);
+    XCTAssertEqual(iPad,       nil);
+}
+
 @end
