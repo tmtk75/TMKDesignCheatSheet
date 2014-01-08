@@ -14,18 +14,35 @@
 
 @implementation TMKDesignCheatSheetTests
 
-- (void)test_iPhone5
+- (void)testPortraitDimension
 {
-    TMKDesignCheatSheet *sheet = TMKDesignCheatSheet.iPhone5;
-    XCTAssertEqual(sheet.portrait.width,   640.0f);
-    XCTAssertEqual(sheet.portrait.height, 1136.0f);
-}
+    TMKDesignCheatSheet *iPhone5 = TMKDesignCheatSheet.iPhone5;
+    XCTAssertEqual(iPhone5.portrait.width,   640.0f);
+    XCTAssertEqual(iPhone5.portrait.height, 1136.0f);
 
-- (void)test_iPhone4
-{
-    TMKDesignCheatSheet *sheet = TMKDesignCheatSheet.iPhone4;
-    XCTAssertEqual(sheet.portrait.width,   640.0);
-    XCTAssertEqual(sheet.portrait.height, 1136.0);
+    TMKDesignCheatSheet *iPhone4S = TMKDesignCheatSheet.iPhone4S;
+    XCTAssertEqual(iPhone4S.portrait.width,  640.0f);
+    XCTAssertEqual(iPhone4S.portrait.height, 960.0f);
+
+    TMKDesignCheatSheet *iPhone4 = TMKDesignCheatSheet.iPhone4;
+    XCTAssertEqual(iPhone4.portrait.width,  640.0f);
+    XCTAssertEqual(iPhone4.portrait.height, 960.0f);
+
+    TMKDesignCheatSheet *iPhone = TMKDesignCheatSheet.iPhone;
+    XCTAssertEqual(iPhone.portrait.width,  320.0f);
+    XCTAssertEqual(iPhone.portrait.height, 480.0f);
+
+    TMKDesignCheatSheet *iPadRetina = TMKDesignCheatSheet.iPadRetina;
+    XCTAssertEqual(iPadRetina.portrait.width,  1536.0f);
+    XCTAssertEqual(iPadRetina.portrait.height, 2048.0f);
+
+    TMKDesignCheatSheet *iPadMini = TMKDesignCheatSheet.iPadMini;
+    XCTAssertEqual(iPadMini.portrait.width,   768.0f);
+    XCTAssertEqual(iPadMini.portrait.height, 1024.0f);
+
+    TMKDesignCheatSheet *iPad = TMKDesignCheatSheet.iPad;
+    XCTAssertEqual(iPad.portrait.width,   768.0f);
+    XCTAssertEqual(iPad.portrait.height, 1024.0f);
 }
 
 @end

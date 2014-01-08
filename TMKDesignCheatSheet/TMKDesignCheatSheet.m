@@ -33,7 +33,32 @@
     return TMKDesignCheatSheet.new;
 }
 
++ (TMKDesignCheatSheet *)iPhone4S
+{
+    return nil;
+}
+
 + (TMKDesignCheatSheet *)iPhone4
+{
+    return self.iPhone4S;
+}
+
++ (TMKDesignCheatSheet *)iPhone
+{
+    return nil;
+}
+
++ (TMKDesignCheatSheet *)iPadRetina
+{
+    return nil;
+}
+
++ (TMKDesignCheatSheet *)iPadMini
+{
+    return nil;
+}
+
++ (TMKDesignCheatSheet *)iPad
 {
     return nil;
 }

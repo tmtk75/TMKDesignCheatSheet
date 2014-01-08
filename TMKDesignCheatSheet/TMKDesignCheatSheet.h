@@ -23,6 +23,11 @@
 
 //
 + (TMKDesignCheatSheet *)iPhone5;
++ (TMKDesignCheatSheet *)iPhone4S;
 + (TMKDesignCheatSheet *)iPhone4;
++ (TMKDesignCheatSheet *)iPhone;
++ (TMKDesignCheatSheet *)iPadRetina;
++ (TMKDesignCheatSheet *)iPadMini;
++ (TMKDesignCheatSheet *)iPad;
 
 @end
