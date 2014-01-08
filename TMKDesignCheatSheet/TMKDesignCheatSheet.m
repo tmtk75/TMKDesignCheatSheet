@@ -71,6 +71,22 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheetDimension alloc] init:dim.height height:dim.width];
 }
 
+- (TMKDesignCheatSheetDimension *)iconSize:(TMKIconType)type
+{
+    if (_iconSizes == nil) {
+        return nil;
+    }
+    
+    CGFloat width = [((NSNumber *)_iconSizes[type]) floatValue];
+    TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:width height:width];
+    return dim;
+}
+
+- (TMKDesignCheatSheetDimension *)appIconSize {return [self iconSize:TMKIconType_AppIcon];}
+- (TMKDesignCheatSheetDimension *)appStoreIconSize {return [self iconSize:TMKIconType_AppStoreIcon];}
+- (TMKDesignCheatSheetDimension *)spotlightIconSize {return [self iconSize:TMKIconType_SpotlightIcon];}
+- (TMKDesignCheatSheetDimension *)settingsIconSize {return [self iconSize:TMKIconType_SettingsIcon];}
+
 + (TMKDesignCheatSheet *)iPhone5
 {
     TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:640.0f height:1136.0f];
@@ -94,7 +110,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
 {
     TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:320.0f height:480.0f];
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:163 colorTemperature:@"Warm"];
-    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:@[]];
+    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:nil];
 }
 
 + (TMKDesignCheatSheet *)iPadRetina
