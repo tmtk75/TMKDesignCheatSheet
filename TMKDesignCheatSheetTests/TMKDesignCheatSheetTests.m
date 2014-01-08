@@ -104,7 +104,7 @@
     XCTAssertEqual(iPhone5.appIconSize.width,    120.0f);
     XCTAssertEqual(iPhone4S.appIconSize.width,   120.0f);
     XCTAssertEqual(iPhone4.appIconSize.width,    120.0f);
-    XCTAssertEqual(iPhone.appIconSize,           nil);  // Not supported
+    XCTAssert     (iPhone.appIconSize == nil);  // Not supported
     XCTAssertEqual(iPadRetina.appIconSize.width, 152.0f);
     XCTAssertEqual(iPadMini.appIconSize.width,    76.0f);
     XCTAssertEqual(iPad.appIconSize.width,        76.0f);
@@ -113,7 +113,7 @@
     XCTAssertEqual(iPhone5.appStoreIconSize.width,    1024.0f);
     XCTAssertEqual(iPhone4S.appStoreIconSize.width,   1024.0f);
     XCTAssertEqual(iPhone4.appStoreIconSize.width,    1024.0f);
-    XCTAssertEqual(iPhone.appStoreIconSize,           nil);  // Not supported
+    XCTAssert     (iPhone.appStoreIconSize == nil);  // Not supported
     XCTAssertEqual(iPadRetina.appStoreIconSize.width, 1024.0f);
     XCTAssertEqual(iPadMini.appStoreIconSize.width,    512.0f);
     XCTAssertEqual(iPad.appStoreIconSize.width,        512.0f);
@@ -122,7 +122,7 @@
     XCTAssertEqual(iPhone5.spotlightIconSize.width,    80.0f);
     XCTAssertEqual(iPhone4S.spotlightIconSize.width,   80.0f);
     XCTAssertEqual(iPhone4.spotlightIconSize.width,    80.0f);
-    XCTAssertEqual(iPhone.spotlightIconSize,           nil);  // Not supported
+    XCTAssert     (iPhone.spotlightIconSize == nil);  // Not supported
     XCTAssertEqual(iPadRetina.spotlightIconSize.width, 80.0f);
     XCTAssertEqual(iPadMini.spotlightIconSize.width,   40.0f);
     XCTAssertEqual(iPad.spotlightIconSize.width,       40.0f);
@@ -131,7 +131,7 @@
     XCTAssertEqual(iPhone5.settingsIconSize.width,    58.0f);
     XCTAssertEqual(iPhone4S.settingsIconSize.width,   58.0f);
     XCTAssertEqual(iPhone4.settingsIconSize.width,    58.0f);
-    XCTAssertEqual(iPhone.settingsIconSize,           nil);  // Not supported
+    XCTAssert     (iPhone.settingsIconSize == nil);  // Not supported
     XCTAssertEqual(iPadRetina.settingsIconSize.width, 58.0f);
     XCTAssertEqual(iPadMini.settingsIconSize.width,   29.0f);
     XCTAssertEqual(iPad.settingsIconSize.width,       29.0f);
