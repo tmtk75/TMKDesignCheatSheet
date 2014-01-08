@@ -21,6 +21,8 @@
 //
 @property (readonly) TMKDesignCheatSheetDimension *portrait;
 @property (readonly) TMKDesignCheatSheetDimension *landscape;
+@property (readonly) NSInteger pixelPerInch;
+@property (readonly) NSString *colorTemperature;
 
 //
 + (TMKDesignCheatSheet *)iPhone5;
