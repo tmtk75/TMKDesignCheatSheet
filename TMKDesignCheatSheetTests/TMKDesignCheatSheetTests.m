@@ -14,7 +14,9 @@
 
 @implementation TMKDesignCheatSheetTests
 
-- (void)testPortraitDimension
+// http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/
+
+- (void)testDimensions
 {
     TMKDesignCheatSheet *iPhone5 = TMKDesignCheatSheet.iPhone5;
     XCTAssertEqual(iPhone5.portrait.width,   640.0f);
@@ -60,14 +62,3 @@
 }
 
 @end
-
-
-/*
- Device  Portrait  Landscape
- iPhone5 640x1136px  1136x640px
- iPhone4/4S 640x960px  960x640px
- iPhone & iPod Touch1st, 2nd and 3rd Generation  320x480px  480x320px
- Retina iPad iPad 3, iPad 41536x2048px  2048x1536px
- iPad Mini  768x1024px  1024x768px
- iPad1st and 2nd Generation  768x1024px  1024x768px
- */

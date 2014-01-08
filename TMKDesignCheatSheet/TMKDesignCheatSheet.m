@@ -21,11 +21,24 @@
 }
 @end
 
+@interface TMKDesignCheatSheet()
+{
+    TMKDesignCheatSheetDimension *_dim;
+}
+- (id)init:(TMKDesignCheatSheetDimension *)dim;
+@end
+
 @implementation TMKDesignCheatSheet
+
+- (id)init:(TMKDesignCheatSheetDimension *)dim
+{
+    _dim = dim;
+    return self;
+}
 
 - (TMKDesignCheatSheetDimension *)portrait
 {
-    return [[TMKDesignCheatSheetDimension alloc] init:640.0f height:1136.0f];
+    return _dim;
 }
 
 - (TMKDesignCheatSheetDimension *)landscape
@@ -36,12 +49,14 @@
 
 + (TMKDesignCheatSheet *)iPhone5
 {
-    return TMKDesignCheatSheet.new;
+    TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:640.0f height:1136.0f];
+    return [[TMKDesignCheatSheet alloc] init:dim];
 }
 
 + (TMKDesignCheatSheet *)iPhone4S
 {
-    return nil;
+    TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:640.0f height:960.0f];
+    return [[TMKDesignCheatSheet alloc] init:dim];
 }
 
 + (TMKDesignCheatSheet *)iPhone4
@@ -51,22 +66,25 @@
 
 + (TMKDesignCheatSheet *)iPhone
 {
-    return nil;
+    TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:320.0f height:480.0f];
+    return [[TMKDesignCheatSheet alloc] init:dim];
 }
 
 + (TMKDesignCheatSheet *)iPadRetina
 {
-    return nil;
+    TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:1536.0f height:2048.0f];
+    return [[TMKDesignCheatSheet alloc] init:dim];
 }
 
 + (TMKDesignCheatSheet *)iPadMini
 {
-    return nil;
+    TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:768.0f height:1024.0f];
+    return [[TMKDesignCheatSheet alloc] init:dim];
 }
 
 + (TMKDesignCheatSheet *)iPad
 {
-    return nil;
+    return self.iPadMini;
 }
 
 @end

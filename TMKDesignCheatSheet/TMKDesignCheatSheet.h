@@ -19,8 +19,8 @@
 @interface TMKDesignCheatSheet : NSObject
 
 //
-- (TMKDesignCheatSheetDimension *)portrait;
-- (TMKDesignCheatSheetDimension *)landscape;
+@property (readonly) TMKDesignCheatSheetDimension *portrait;
+@property (readonly) TMKDesignCheatSheetDimension *landscape;
 
 //
 + (TMKDesignCheatSheet *)iPhone5;
