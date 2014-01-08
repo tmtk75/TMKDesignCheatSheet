@@ -28,6 +28,12 @@
     return [[TMKDesignCheatSheetDimension alloc] init:640.0f height:1136.0f];
 }
 
+- (TMKDesignCheatSheetDimension *)landscape
+{
+    TMKDesignCheatSheetDimension *dim = self.portrait;
+    return [[TMKDesignCheatSheetDimension alloc] init:dim.height height:dim.width];
+}
+
 + (TMKDesignCheatSheet *)iPhone5
 {
     return TMKDesignCheatSheet.new;

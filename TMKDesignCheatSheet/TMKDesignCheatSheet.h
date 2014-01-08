@@ -20,6 +20,7 @@
 
 //
 - (TMKDesignCheatSheetDimension *)portrait;
+- (TMKDesignCheatSheetDimension *)landscape;
 
 //
 + (TMKDesignCheatSheet *)iPhone5;
