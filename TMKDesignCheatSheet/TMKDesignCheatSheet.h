@@ -16,13 +16,18 @@
 @end
 
 
+@interface TMKDesignCheatSheetDisplay : NSObject
+@property (readonly) NSInteger pixelPerInch;
+@property (readonly) NSString *colorTemperature;
+@end
+
+
 @interface TMKDesignCheatSheet : NSObject
 
 //
 @property (readonly) TMKDesignCheatSheetDimension *portrait;
 @property (readonly) TMKDesignCheatSheetDimension *landscape;
-@property (readonly) NSInteger pixelPerInch;
-@property (readonly) NSString *colorTemperature;
+@property (readonly) TMKDesignCheatSheetDisplay *display;
 
 //
 + (TMKDesignCheatSheet *)iPhone5;

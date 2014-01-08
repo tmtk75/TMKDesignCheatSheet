@@ -72,22 +72,22 @@
     TMKDesignCheatSheet *iPad       = TMKDesignCheatSheet.iPad;
 
     // PPI
-    XCTAssertEqual(iPhone5.pixelPerInch,    326);
-    XCTAssertEqual(iPhone4S.pixelPerInch,   326);
-    XCTAssertEqual(iPhone4.pixelPerInch,    326);
-    XCTAssertEqual(iPhone.pixelPerInch,     163);
-    XCTAssertEqual(iPadRetina.pixelPerInch, 264);
-    XCTAssertEqual(iPadMini.pixelPerInch,   163);
-    XCTAssertEqual(iPad.pixelPerInch,       132);
+    XCTAssertEqual(iPhone5.display.pixelPerInch,    326);
+    XCTAssertEqual(iPhone4S.display.pixelPerInch,   326);
+    XCTAssertEqual(iPhone4.display.pixelPerInch,    326);
+    XCTAssertEqual(iPhone.display.pixelPerInch,     163);
+    XCTAssertEqual(iPadRetina.display.pixelPerInch, 264);
+    XCTAssertEqual(iPadMini.display.pixelPerInch,   163);
+    XCTAssertEqual(iPad.display.pixelPerInch,       132);
 
     // Color Temperature
-    XCTAssertEqual(iPhone5.colorTemperature,    @"Warm");
-    XCTAssertEqual(iPhone4S.colorTemperature,   @"Cool");
-    XCTAssertEqual(iPhone4.colorTemperature,    @"Cool");
-    XCTAssertEqual(iPhone.colorTemperature,     @"Warm");
-    XCTAssertEqual(iPadRetina.colorTemperature, @"Warm");
-    XCTAssertEqual(iPadMini.colorTemperature,   @"Unknown");
-    XCTAssertEqual(iPad.colorTemperature,       @"Warm");
+    XCTAssertEqual(iPhone5.display.colorTemperature,    @"Warm");
+    XCTAssertEqual(iPhone4S.display.colorTemperature,   @"Cool");
+    XCTAssertEqual(iPhone4.display.colorTemperature,    @"Cool");
+    XCTAssertEqual(iPhone.display.colorTemperature,     @"Warm");
+    XCTAssertEqual(iPadRetina.display.colorTemperature, @"Warm");
+    XCTAssertEqual(iPadMini.display.colorTemperature,   @"Unknown");
+    XCTAssertEqual(iPad.display.colorTemperature,       @"Warm");
 }
 
 - (void)test
