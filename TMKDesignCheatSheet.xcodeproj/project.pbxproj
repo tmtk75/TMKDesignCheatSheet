@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D8CABDC187CD9090082DDC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8CABDB187CD9090082DDC7 /* Foundation.framework */; };
+		0D8CABE1187CD9090082DDC7 /* TMKDesignCheatSheet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D8CABE0187CD9090082DDC7 /* TMKDesignCheatSheet.h */; };
+		0D8CABE3187CD9090082DDC7 /* TMKDesignCheatSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CABE2187CD9090082DDC7 /* TMKDesignCheatSheet.m */; };
+		0D8CABEA187CD9090082DDC7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8CABE9187CD9090082DDC7 /* XCTest.framework */; };
+		0D8CABEB187CD9090082DDC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8CABDB187CD9090082DDC7 /* Foundation.framework */; };
+		0D8CABED187CD9090082DDC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8CABEC187CD9090082DDC7 /* UIKit.framework */; };
+		0D8CABF0187CD9090082DDC7 /* libTMKDesignCheatSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8CABD8187CD9090082DDC7 /* libTMKDesignCheatSheet.a */; };
+		0D8CABF6187CD9090082DDC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D8CABF4187CD9090082DDC7 /* InfoPlist.strings */; };
+		0D8CABF8187CD9090082DDC7 /* TMKDesignCheatSheetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CABF7187CD9090082DDC7 /* TMKDesignCheatSheetTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D8CABEE187CD9090082DDC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D8CABD0187CD9090082DDC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D8CABD7187CD9090082DDC7;
+			remoteInfo = TMKDesignCheatSheet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D8CABD6187CD9090082DDC7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0D8CABE1187CD9090082DDC7 /* TMKDesignCheatSheet.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0D8CABD8187CD9090082DDC7 /* libTMKDesignCheatSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTMKDesignCheatSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8CABDB187CD9090082DDC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0D8CABDF187CD9090082DDC7 /* TMKDesignCheatSheet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TMKDesignCheatSheet-Prefix.pch"; sourceTree = "<group>"; };
+		0D8CABE0187CD9090082DDC7 /* TMKDesignCheatSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMKDesignCheatSheet.h; sourceTree = "<group>"; };
+		0D8CABE2187CD9090082DDC7 /* TMKDesignCheatSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMKDesignCheatSheet.m; sourceTree = "<group>"; };
+		0D8CABE8187CD9090082DDC7 /* TMKDesignCheatSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMKDesignCheatSheetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8CABE9187CD9090082DDC7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0D8CABEC187CD9090082DDC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		0D8CABF3187CD9090082DDC7 /* TMKDesignCheatSheetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMKDesignCheatSheetTests-Info.plist"; sourceTree = "<group>"; };
+		0D8CABF5187CD9090082DDC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0D8CABF7187CD9090082DDC7 /* TMKDesignCheatSheetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMKDesignCheatSheetTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D8CABD5187CD9090082DDC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8CABDC187CD9090082DDC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D8CABE5187CD9090082DDC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8CABEA187CD9090082DDC7 /* XCTest.framework in Frameworks */,
+				0D8CABED187CD9090082DDC7 /* UIKit.framework in Frameworks */,
+				0D8CABF0187CD9090082DDC7 /* libTMKDesignCheatSheet.a in Frameworks */,
+				0D8CABEB187CD9090082DDC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D8CABCF187CD9090082DDC7 = {
+			isa = PBXGroup;
+			children = (
+				0D8CABDD187CD9090082DDC7 /* TMKDesignCheatSheet */,
+				0D8CABF1187CD9090082DDC7 /* TMKDesignCheatSheetTests */,
+				0D8CABDA187CD9090082DDC7 /* Frameworks */,
+				0D8CABD9187CD9090082DDC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0D8CABD9187CD9090082DDC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CABD8187CD9090082DDC7 /* libTMKDesignCheatSheet.a */,
+				0D8CABE8187CD9090082DDC7 /* TMKDesignCheatSheetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D8CABDA187CD9090082DDC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CABDB187CD9090082DDC7 /* Foundation.framework */,
+				0D8CABE9187CD9090082DDC7 /* XCTest.framework */,
+				0D8CABEC187CD9090082DDC7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D8CABDD187CD9090082DDC7 /* TMKDesignCheatSheet */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CABE0187CD9090082DDC7 /* TMKDesignCheatSheet.h */,
+				0D8CABE2187CD9090082DDC7 /* TMKDesignCheatSheet.m */,
+				0D8CABDE187CD9090082DDC7 /* Supporting Files */,
+			);
+			path = TMKDesignCheatSheet;
+			sourceTree = "<group>";
+		};
+		0D8CABDE187CD9090082DDC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CABDF187CD9090082DDC7 /* TMKDesignCheatSheet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D8CABF1187CD9090082DDC7 /* TMKDesignCheatSheetTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CABF7187CD9090082DDC7 /* TMKDesignCheatSheetTests.m */,
+				0D8CABF2187CD9090082DDC7 /* Supporting Files */,
+			);
+			path = TMKDesignCheatSheetTests;
+			sourceTree = "<group>";
+		};
+		0D8CABF2187CD9090082DDC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CABF3187CD9090082DDC7 /* TMKDesignCheatSheetTests-Info.plist */,
+				0D8CABF4187CD9090082DDC7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D8CABD7187CD9090082DDC7 /* TMKDesignCheatSheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D8CABFB187CD9090082DDC7 /* Build configuration list for PBXNativeTarget "TMKDesignCheatSheet" */;
+			buildPhases = (
+				0D8CABD4187CD9090082DDC7 /* Sources */,
+				0D8CABD5187CD9090082DDC7 /* Frameworks */,
+				0D8CABD6187CD9090082DDC7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMKDesignCheatSheet;
+			productName = TMKDesignCheatSheet;
+			productReference = 0D8CABD8187CD9090082DDC7 /* libTMKDesignCheatSheet.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0D8CABE7187CD9090082DDC7 /* TMKDesignCheatSheetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D8CABFE187CD9090082DDC7 /* Build configuration list for PBXNativeTarget "TMKDesignCheatSheetTests" */;
+			buildPhases = (
+				0D8CABE4187CD9090082DDC7 /* Sources */,
+				0D8CABE5187CD9090082DDC7 /* Frameworks */,
+				0D8CABE6187CD9090082DDC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D8CABEF187CD9090082DDC7 /* PBXTargetDependency */,
+			);
+			name = TMKDesignCheatSheetTests;
+			productName = TMKDesignCheatSheetTests;
+			productReference = 0D8CABE8187CD9090082DDC7 /* TMKDesignCheatSheetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D8CABD0187CD9090082DDC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Tomotaka Sakuma";
+			};
+			buildConfigurationList = 0D8CABD3187CD9090082DDC7 /* Build configuration list for PBXProject "TMKDesignCheatSheet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0D8CABCF187CD9090082DDC7;
+			productRefGroup = 0D8CABD9187CD9090082DDC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D8CABD7187CD9090082DDC7 /* TMKDesignCheatSheet */,
+				0D8CABE7187CD9090082DDC7 /* TMKDesignCheatSheetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D8CABE6187CD9090082DDC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8CABF6187CD9090082DDC7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D8CABD4187CD9090082DDC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8CABE3187CD9090082DDC7 /* TMKDesignCheatSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D8CABE4187CD9090082DDC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8CABF8187CD9090082DDC7 /* TMKDesignCheatSheetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D8CABEF187CD9090082DDC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D8CABD7187CD9090082DDC7 /* TMKDesignCheatSheet */;
+			targetProxy = 0D8CABEE187CD9090082DDC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0D8CABF4187CD9090082DDC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D8CABF5187CD9090082DDC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0D8CABF9187CD9090082DDC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0D8CABFA187CD9090082DDC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D8CABFC187CD9090082DDC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TMKDesignCheatSheet.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMKDesignCheatSheet/TMKDesignCheatSheet-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0D8CABFD187CD9090082DDC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TMKDesignCheatSheet.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMKDesignCheatSheet/TMKDesignCheatSheet-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0D8CABFF187CD9090082DDC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMKDesignCheatSheet/TMKDesignCheatSheet-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TMKDesignCheatSheetTests/TMKDesignCheatSheetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0D8CAC00187CD9090082DDC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMKDesignCheatSheet/TMKDesignCheatSheet-Prefix.pch";
+				INFOPLIST_FILE = "TMKDesignCheatSheetTests/TMKDesignCheatSheetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D8CABD3187CD9090082DDC7 /* Build configuration list for PBXProject "TMKDesignCheatSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D8CABF9187CD9090082DDC7 /* Debug */,
+				0D8CABFA187CD9090082DDC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D8CABFB187CD9090082DDC7 /* Build configuration list for PBXNativeTarget "TMKDesignCheatSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D8CABFC187CD9090082DDC7 /* Debug */,
+				0D8CABFD187CD9090082DDC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0D8CABFE187CD9090082DDC7 /* Build configuration list for PBXNativeTarget "TMKDesignCheatSheetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D8CABFF187CD9090082DDC7 /* Debug */,
+				0D8CAC00187CD9090082DDC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D8CABD0187CD9090082DDC7 /* Project object */;
+}
