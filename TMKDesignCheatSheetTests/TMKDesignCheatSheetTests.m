@@ -161,6 +161,21 @@
     XCTAssertEqual(iPadMini.landscape.statusBarHeight,   20.0f);
     XCTAssertEqual(iPad.portrait.statusBarHeight,        20.0f);
     XCTAssertEqual(iPad.landscape.statusBarHeight,       20.0f);
+
+    // Navigation Bar
+    XCTAssertEqual(iPhone5.portrait.navigationBarHeight,     88.0f);
+    XCTAssertEqual(iPhone5.landscape.navigationBarHeight,    64.0f);
+    XCTAssertEqual(iPhone4S.portrait.navigationBarHeight,    88.0f);
+    XCTAssertEqual(iPhone4S.landscape.navigationBarHeight,   64.0f);
+    XCTAssertEqual(iPhone4.portrait.navigationBarHeight,     88.0f);
+    XCTAssertEqual(iPhone4.landscape.navigationBarHeight,    64.0f);
+    XCTAssert     (iPhone.portrait.navigationBarHeight == -1.0f);
+    XCTAssertEqual(iPadRetina.portrait.navigationBarHeight,  88.0f);
+    XCTAssertEqual(iPadRetina.landscape.navigationBarHeight, 88.0f);
+    XCTAssertEqual(iPadMini.portrait.navigationBarHeight,    44.0f);
+    XCTAssertEqual(iPadMini.landscape.navigationBarHeight,   44.0f);
+    XCTAssertEqual(iPad.portrait.navigationBarHeight,        44.0f);
+    XCTAssertEqual(iPad.landscape.navigationBarHeight,       44.0f);
 }
 
 - (void)test

@@ -25,6 +25,7 @@
 @interface TMKDesignCheatSheetOrientation : NSObject
 @property (readonly) TMKDesignCheatSheetDimension *resolution;
 @property (readonly) CGFloat statusBarHeight;
+@property (readonly) CGFloat navigationBarHeight;
 @end
 
 

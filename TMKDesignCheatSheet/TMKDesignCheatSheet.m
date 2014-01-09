@@ -48,7 +48,8 @@
 }
 
 - (TMKDesignCheatSheetDimension *)resolution {return _dim;}
-- (CGFloat)statusBarHeight {return 40.f;}
+- (CGFloat)statusBarHeight {return 40.0f;}
+- (CGFloat)navigationBarHeight {return 88.0f;}
 @end
 
 typedef NS_ENUM(NSUInteger, TMKIconType) {
