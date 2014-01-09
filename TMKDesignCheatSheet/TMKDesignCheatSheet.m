@@ -34,8 +34,14 @@
 }
 @end
 
+typedef NS_ENUM(NSUInteger, TMKOrientation) {
+    TMKOrientation_Portrait,
+    TMKOrientation_Landscape,
+};
+
 @interface TMKDesignCheatSheetOrientation()
 {
+    TMKOrientation _orientation;
     TMKDesignCheatSheetDimension *_dim;
     NSArray *_uiSizes;
 }
@@ -49,8 +55,9 @@ typedef NS_ENUM(NSUInteger, TMKUIType) {
 };
 
 @implementation TMKDesignCheatSheetOrientation
-- (id)init:(TMKDesignCheatSheetDimension *)dim uiSizes:(NSArray *)uiSizes
+- (id)init:(TMKOrientation)orient resolution:(TMKDesignCheatSheetDimension *)dim uiSizes:(NSArray *)uiSizes
 {
+    _orientation = orient;
     _dim = dim;
     _uiSizes = uiSizes;
     return self;
@@ -100,14 +107,14 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
 
 - (TMKDesignCheatSheetOrientation *)portrait
 {
-    return [[TMKDesignCheatSheetOrientation alloc] init:_dim uiSizes:_uiSizes];
+    return [[TMKDesignCheatSheetOrientation alloc] init:TMKOrientation_Portrait resolution:_dim uiSizes:_uiSizes];
 }
 
 - (TMKDesignCheatSheetOrientation *)landscape
 {
     TMKDesignCheatSheetDimension *dim = self.portrait.resolution;
     TMKDesignCheatSheetDimension *rotate = [[TMKDesignCheatSheetDimension alloc] init:dim.height height:dim.width];
-    return [[TMKDesignCheatSheetOrientation alloc] init:rotate uiSizes:_uiSizes];
+    return [[TMKDesignCheatSheetOrientation alloc] init:TMKOrientation_Landscape resolution:rotate uiSizes:_uiSizes];
 }
 
 - (TMKDesignCheatSheetDimension *)iconSize:(TMKIconType)type
