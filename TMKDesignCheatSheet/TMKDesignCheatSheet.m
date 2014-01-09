@@ -37,19 +37,36 @@
 @interface TMKDesignCheatSheetOrientation()
 {
     TMKDesignCheatSheetDimension *_dim;
+    NSArray *_uiSizes;
 }
 @end
 
+typedef NS_ENUM(NSUInteger, TMKUIType) {
+    TMKUIType_StatusBar,
+    TMKUIType_NavigationBar,
+    TMKUIType_TabBar,
+    TMKUIType_Tables,
+};
+
 @implementation TMKDesignCheatSheetOrientation
-- (id)init:(TMKDesignCheatSheetDimension *)dim
+- (id)init:(TMKDesignCheatSheetDimension *)dim uiSizes:(NSArray *)uiSizes
 {
     _dim = dim;
+    _uiSizes = uiSizes;
     return self;
 }
 
 - (TMKDesignCheatSheetDimension *)resolution {return _dim;}
-- (CGFloat)statusBarHeight {return 40.0f;}
-- (CGFloat)navigationBarHeight {return 88.0f;}
+- (CGFloat)statusBarHeight {return [self uiSizeOf:TMKUIType_StatusBar];}
+- (CGFloat)navigationBarHeight {return [self uiSizeOf:TMKUIType_NavigationBar];}
+- (CGFloat)uiSizeOf:(TMKUIType)type
+{
+    if (_uiSizes == nil) {
+        return -1.0f;
+    }
+
+    return [((NSNumber *)_uiSizes[type]) floatValue];
+}
 @end
 
 typedef NS_ENUM(NSUInteger, TMKIconType) {
@@ -64,30 +81,33 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     TMKDesignCheatSheetDimension *_dim;
     TMKDesignCheatSheetDisplay *_display;
     NSArray *_iconSizes;
+    NSArray *_uiSizes;
 }
-- (id)init:(TMKDesignCheatSheetDimension *)dim display:(TMKDesignCheatSheetDisplay *)display iconWidths:(NSArray *)iconSizes;
+- (id)init:(TMKDesignCheatSheetDimension *)dim display:(TMKDesignCheatSheetDisplay *)display iconWidths:(NSArray *)iconSizes uiSizes:(NSArray *)uiSizes;
 @end
 
 @implementation TMKDesignCheatSheet
 
 - (id)init:(TMKDesignCheatSheetDimension *)dim display:(TMKDesignCheatSheetDisplay *)display iconWidths:(NSArray *)iconSizes
+   uiSizes:(NSArray *)uiSizes
 {
     _dim = dim;
     _display = display;
     _iconSizes = iconSizes;
+    _uiSizes = uiSizes;
     return self;
 }
 
 - (TMKDesignCheatSheetOrientation *)portrait
 {
-    return [[TMKDesignCheatSheetOrientation alloc] init:_dim];
+    return [[TMKDesignCheatSheetOrientation alloc] init:_dim uiSizes:_uiSizes];
 }
 
 - (TMKDesignCheatSheetOrientation *)landscape
 {
     TMKDesignCheatSheetDimension *dim = self.portrait.resolution;
     TMKDesignCheatSheetDimension *rotate = [[TMKDesignCheatSheetDimension alloc] init:dim.height height:dim.width];
-    return [[TMKDesignCheatSheetOrientation alloc] init:rotate];
+    return [[TMKDesignCheatSheetOrientation alloc] init:rotate uiSizes:_uiSizes];
 }
 
 - (TMKDesignCheatSheetDimension *)iconSize:(TMKIconType)type
@@ -101,23 +121,33 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return dim;
 }
 
+
+#pragma mark - Icon Size
 - (TMKDesignCheatSheetDimension *)appIconSize {return [self iconSize:TMKIconType_AppIcon];}
 - (TMKDesignCheatSheetDimension *)appStoreIconSize {return [self iconSize:TMKIconType_AppStoreIcon];}
 - (TMKDesignCheatSheetDimension *)spotlightIconSize {return [self iconSize:TMKIconType_SpotlightIcon];}
 - (TMKDesignCheatSheetDimension *)settingsIconSize {return [self iconSize:TMKIconType_SettingsIcon];}
 
+
+#pragma mark - Factory Methods
 + (TMKDesignCheatSheet *)iPhone5
 {
     TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:640.0f height:1136.0f];
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:326 colorTemperature:@"Warm"];
-    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]];
+    return [[TMKDesignCheatSheet alloc] init:dim
+                                     display:display
+                                  iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]
+                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPhone4S
 {
     TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:640.0f height:960.0f];
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:326 colorTemperature:@"Cool"];
-    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]];
+    return [[TMKDesignCheatSheet alloc] init:dim
+                                     display:display
+                                  iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]
+                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPhone4
@@ -129,28 +159,37 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
 {
     TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:320.0f height:480.0f];
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:163 colorTemperature:@"Warm"];
-    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:nil];
+    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:nil uiSizes:nil];
 }
 
 + (TMKDesignCheatSheet *)iPadRetina
 {
     TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:1536.0f height:2048.0f];
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:264 colorTemperature:@"Warm"];
-    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:@[@152, @1024.0f, @80.0f, @58.0f]];
+    return [[TMKDesignCheatSheet alloc] init:dim
+                                     display:display
+                                  iconWidths:@[@152, @1024.0f, @80.0f, @58.0f]
+                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPadMini
 {
     TMKDesignCheatSheetDimension *dim = [[TMKDesignCheatSheetDimension alloc] init:768.0f height:1024.0f];
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:163 colorTemperature:@"Unknown"];
-    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:@[@76, @512.0f, @40.0f, @29.0f]];
+    return [[TMKDesignCheatSheet alloc] init:dim
+                                     display:display
+                                  iconWidths:@[@76, @512.0f, @40.0f, @29.0f]
+                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPad
 {
     TMKDesignCheatSheetDimension *dim = self.iPadMini.portrait.resolution;
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:132 colorTemperature:@"Warm"];
-    return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:@[@76, @512.0f, @40.0f, @29.0f]];
+    return [[TMKDesignCheatSheet alloc] init:dim
+                                     display:display
+                                  iconWidths:@[@76, @512.0f, @40.0f, @29.0f]
+                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
 }
 
 @end
