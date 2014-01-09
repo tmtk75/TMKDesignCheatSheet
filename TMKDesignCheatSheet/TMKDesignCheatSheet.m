@@ -168,8 +168,8 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:264 colorTemperature:@"Warm"];
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
-                                  iconWidths:@[@152, @1024.0f, @80.0f, @58.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
+                                  iconWidths:@[@152.f, @1024.0f, @80.0f, @58.0f]
+                                     uiSizes:@[@40.0f, @88.0f, @112.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPadMini
@@ -178,8 +178,8 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:163 colorTemperature:@"Unknown"];
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
-                                  iconWidths:@[@76, @512.0f, @40.0f, @29.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
+                                  iconWidths:@[@76.f, @512.0f, @40.0f, @29.0f]
+                                     uiSizes:@[@20.0f, @44.0f, @56.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPad
@@ -188,8 +188,8 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:132 colorTemperature:@"Warm"];
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
-                                  iconWidths:@[@76, @512.0f, @40.0f, @29.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
+                                  iconWidths:@[@76.f, @512.0f, @40.0f, @29.0f]
+                                     uiSizes:@[@20.0f, @44.0f, @56.f, @640.f]];
 }
 
 @end
