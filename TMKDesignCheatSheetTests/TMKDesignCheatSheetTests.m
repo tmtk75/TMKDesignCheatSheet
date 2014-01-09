@@ -137,6 +137,32 @@
     XCTAssertEqual(iPad.settingsIconSize.width,       29.0f);
 }
 
+- (void)testUserInterface
+{
+    TMKDesignCheatSheet *iPhone5    = TMKDesignCheatSheet.iPhone5;
+    TMKDesignCheatSheet *iPhone4S   = TMKDesignCheatSheet.iPhone4S;
+    TMKDesignCheatSheet *iPhone4    = TMKDesignCheatSheet.iPhone4;
+    TMKDesignCheatSheet *iPhone     = TMKDesignCheatSheet.iPhone;
+    TMKDesignCheatSheet *iPadRetina = TMKDesignCheatSheet.iPadRetina;
+    TMKDesignCheatSheet *iPadMini   = TMKDesignCheatSheet.iPadMini;
+    TMKDesignCheatSheet *iPad       = TMKDesignCheatSheet.iPad;
+
+    XCTAssertEqual(iPhone5.portrait.statusBarHeight,      40.0f);
+    XCTAssertEqual(iPhone5.landscape.statusBarHeight,     40.0f);
+    XCTAssertEqual(iPhone4S.portrait.statusBarHeight,     40.0f);
+    XCTAssertEqual(iPhone4S.landscape.statusBarHeight,    40.0f);
+    XCTAssertEqual(iPhone4.portrait.statusBarHeight,      40.0f);
+    XCTAssertEqual(iPhone4.landscape.statusBarHeight,     40.0f);
+    XCTAssert     (iPhone.portrait.statusBarHeight  == NAN);
+    XCTAssert     (iPhone.landscape.statusBarHeight == NAN);
+    XCTAssertEqual(iPadRetina.portrait.statusBar.height,  40.0f);
+    XCTAssertEqual(iPadRetina.landscape.statusBar.height, 40.0f);
+    XCTAssertEqual(iPadMini.portrait.statusBar.height,    20.0f);
+    XCTAssertEqual(iPadMini.landscape.statusBar.height,   20.0f);
+    XCTAssertEqual(iPad.portrait.statusBar.height,        20.0f);
+    XCTAssertEqual(iPad.landscape.statusBar.height,       20.0f);
+}
+
 - (void)test
 {
     TMKDesignCheatSheet *iPhone5    = TMKDesignCheatSheet.iPhone5;
