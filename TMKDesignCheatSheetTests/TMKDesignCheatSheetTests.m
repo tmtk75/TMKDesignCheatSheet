@@ -19,46 +19,46 @@
 - (void)testResolutions
 {
     TMKDesignCheatSheet *iPhone5 = TMKDesignCheatSheet.iPhone5;
-    XCTAssertEqual(iPhone5.portrait.width,   640.0f);
-    XCTAssertEqual(iPhone5.portrait.height, 1136.0f);
-    XCTAssertEqual(iPhone5.landscape.width,  1136.0f);
-    XCTAssertEqual(iPhone5.landscape.height,  640.0f);
+    XCTAssertEqual(iPhone5.portrait.resolution.width,    640.0f);
+    XCTAssertEqual(iPhone5.portrait.resolution.height,  1136.0f);
+    XCTAssertEqual(iPhone5.landscape.resolution.width,  1136.0f);
+    XCTAssertEqual(iPhone5.landscape.resolution.height,  640.0f);
 
     TMKDesignCheatSheet *iPhone4S = TMKDesignCheatSheet.iPhone4S;
-    XCTAssertEqual(iPhone4S.portrait.width,  640.0f);
-    XCTAssertEqual(iPhone4S.portrait.height, 960.0f);
-    XCTAssertEqual(iPhone4S.landscape.width,  960.0f);
-    XCTAssertEqual(iPhone4S.landscape.height, 640.0f);
+    XCTAssertEqual(iPhone4S.portrait.resolution.width,   640.0f);
+    XCTAssertEqual(iPhone4S.portrait.resolution.height,  960.0f);
+    XCTAssertEqual(iPhone4S.landscape.resolution.width,  960.0f);
+    XCTAssertEqual(iPhone4S.landscape.resolution.height, 640.0f);
 
     TMKDesignCheatSheet *iPhone4 = TMKDesignCheatSheet.iPhone4;
-    XCTAssertEqual(iPhone4.portrait.width,  640.0f);
-    XCTAssertEqual(iPhone4.portrait.height, 960.0f);
-    XCTAssertEqual(iPhone4.landscape.width,  960.0f);
-    XCTAssertEqual(iPhone4.landscape.height, 640.0f);
+    XCTAssertEqual(iPhone4.portrait.resolution.width,   640.0f);
+    XCTAssertEqual(iPhone4.portrait.resolution.height,  960.0f);
+    XCTAssertEqual(iPhone4.landscape.resolution.width,  960.0f);
+    XCTAssertEqual(iPhone4.landscape.resolution.height, 640.0f);
 
     TMKDesignCheatSheet *iPhone = TMKDesignCheatSheet.iPhone;
-    XCTAssertEqual(iPhone.portrait.width,  320.0f);
-    XCTAssertEqual(iPhone.portrait.height, 480.0f);
-    XCTAssertEqual(iPhone.landscape.width,  480.0f);
-    XCTAssertEqual(iPhone.landscape.height, 320.0f);
+    XCTAssertEqual(iPhone.portrait.resolution.width,   320.0f);
+    XCTAssertEqual(iPhone.portrait.resolution.height,  480.0f);
+    XCTAssertEqual(iPhone.landscape.resolution.width,  480.0f);
+    XCTAssertEqual(iPhone.landscape.resolution.height, 320.0f);
 
     TMKDesignCheatSheet *iPadRetina = TMKDesignCheatSheet.iPadRetina;
-    XCTAssertEqual(iPadRetina.portrait.width,  1536.0f);
-    XCTAssertEqual(iPadRetina.portrait.height, 2048.0f);
-    XCTAssertEqual(iPadRetina.landscape.width,  2048.0f);
-    XCTAssertEqual(iPadRetina.landscape.height, 1536.0f);
+    XCTAssertEqual(iPadRetina.portrait.resolution.width,   1536.0f);
+    XCTAssertEqual(iPadRetina.portrait.resolution.height,  2048.0f);
+    XCTAssertEqual(iPadRetina.landscape.resolution.width,  2048.0f);
+    XCTAssertEqual(iPadRetina.landscape.resolution.height, 1536.0f);
 
     TMKDesignCheatSheet *iPadMini = TMKDesignCheatSheet.iPadMini;
-    XCTAssertEqual(iPadMini.portrait.width,   768.0f);
-    XCTAssertEqual(iPadMini.portrait.height, 1024.0f);
-    XCTAssertEqual(iPadMini.landscape.width,  1024.0f);
-    XCTAssertEqual(iPadMini.landscape.height,  768.0f);
+    XCTAssertEqual(iPadMini.portrait.resolution.width,    768.0f);
+    XCTAssertEqual(iPadMini.portrait.resolution.height,  1024.0f);
+    XCTAssertEqual(iPadMini.landscape.resolution.width,  1024.0f);
+    XCTAssertEqual(iPadMini.landscape.resolution.height,  768.0f);
 
     TMKDesignCheatSheet *iPad = TMKDesignCheatSheet.iPad;
-    XCTAssertEqual(iPad.portrait.width,   768.0f);
-    XCTAssertEqual(iPad.portrait.height, 1024.0f);
-    XCTAssertEqual(iPad.landscape.width,  1024.0f);
-    XCTAssertEqual(iPad.landscape.height,  768.0f);
+    XCTAssertEqual(iPad.portrait.resolution.width,    768.0f);
+    XCTAssertEqual(iPad.portrait.resolution.height,  1024.0f);
+    XCTAssertEqual(iPad.landscape.resolution.width,  1024.0f);
+    XCTAssertEqual(iPad.landscape.resolution.height,  768.0f);
 }
 
 - (void)testDisplays
@@ -147,20 +147,20 @@
     TMKDesignCheatSheet *iPadMini   = TMKDesignCheatSheet.iPadMini;
     TMKDesignCheatSheet *iPad       = TMKDesignCheatSheet.iPad;
 
-    XCTAssertEqual(iPhone5.portrait.statusBarHeight,      40.0f);
-    XCTAssertEqual(iPhone5.landscape.statusBarHeight,     40.0f);
-    XCTAssertEqual(iPhone4S.portrait.statusBarHeight,     40.0f);
-    XCTAssertEqual(iPhone4S.landscape.statusBarHeight,    40.0f);
-    XCTAssertEqual(iPhone4.portrait.statusBarHeight,      40.0f);
-    XCTAssertEqual(iPhone4.landscape.statusBarHeight,     40.0f);
-    XCTAssert     (iPhone.portrait.statusBarHeight  == NAN);
-    XCTAssert     (iPhone.landscape.statusBarHeight == NAN);
-    XCTAssertEqual(iPadRetina.portrait.statusBar.height,  40.0f);
-    XCTAssertEqual(iPadRetina.landscape.statusBar.height, 40.0f);
-    XCTAssertEqual(iPadMini.portrait.statusBar.height,    20.0f);
-    XCTAssertEqual(iPadMini.landscape.statusBar.height,   20.0f);
-    XCTAssertEqual(iPad.portrait.statusBar.height,        20.0f);
-    XCTAssertEqual(iPad.landscape.statusBar.height,       20.0f);
+    // Status Bar
+    XCTAssertEqual(iPhone5.portrait.statusBarHeight,     40.0f);
+    XCTAssertEqual(iPhone5.landscape.statusBarHeight,    40.0f);
+    XCTAssertEqual(iPhone4S.portrait.statusBarHeight,    40.0f);
+    XCTAssertEqual(iPhone4S.landscape.statusBarHeight,   40.0f);
+    XCTAssertEqual(iPhone4.portrait.statusBarHeight,     40.0f);
+    XCTAssertEqual(iPhone4.landscape.statusBarHeight,    40.0f);
+    XCTAssert     (iPhone.portrait.statusBarHeight == -1.0f);
+    XCTAssertEqual(iPadRetina.portrait.statusBarHeight,  40.0f);
+    XCTAssertEqual(iPadRetina.landscape.statusBarHeight, 40.0f);
+    XCTAssertEqual(iPadMini.portrait.statusBarHeight,    20.0f);
+    XCTAssertEqual(iPadMini.landscape.statusBarHeight,   20.0f);
+    XCTAssertEqual(iPad.portrait.statusBarHeight,        20.0f);
+    XCTAssertEqual(iPad.landscape.statusBarHeight,       20.0f);
 }
 
 - (void)test

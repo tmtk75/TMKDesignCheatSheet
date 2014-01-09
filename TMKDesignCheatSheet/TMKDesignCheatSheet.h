@@ -22,11 +22,17 @@
 @end
 
 
+@interface TMKDesignCheatSheetOrientation : NSObject
+@property (readonly) TMKDesignCheatSheetDimension *resolution;
+@property (readonly) CGFloat statusBarHeight;
+@end
+
+
 @interface TMKDesignCheatSheet : NSObject
 
 //
-@property (readonly) TMKDesignCheatSheetDimension *portrait;
-@property (readonly) TMKDesignCheatSheetDimension *landscape;
+@property (readonly) TMKDesignCheatSheetOrientation *portrait;
+@property (readonly) TMKDesignCheatSheetOrientation *landscape;
 @property (readonly) TMKDesignCheatSheetDisplay *display;
 @property (readonly) TMKDesignCheatSheetDimension *appIconSize;
 @property (readonly) TMKDesignCheatSheetDimension *appStoreIconSize;

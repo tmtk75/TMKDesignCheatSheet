@@ -34,6 +34,23 @@
 }
 @end
 
+@interface TMKDesignCheatSheetOrientation()
+{
+    TMKDesignCheatSheetDimension *_dim;
+}
+@end
+
+@implementation TMKDesignCheatSheetOrientation
+- (id)init:(TMKDesignCheatSheetDimension *)dim
+{
+    _dim = dim;
+    return self;
+}
+
+- (TMKDesignCheatSheetDimension *)resolution {return _dim;}
+- (CGFloat)statusBarHeight {return 40.f;}
+@end
+
 typedef NS_ENUM(NSUInteger, TMKIconType) {
     TMKIconType_AppIcon,
     TMKIconType_AppStoreIcon,
@@ -60,15 +77,16 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return self;
 }
 
-- (TMKDesignCheatSheetDimension *)portrait
+- (TMKDesignCheatSheetOrientation *)portrait
 {
-    return _dim;
+    return [[TMKDesignCheatSheetOrientation alloc] init:_dim];
 }
 
-- (TMKDesignCheatSheetDimension *)landscape
+- (TMKDesignCheatSheetOrientation *)landscape
 {
-    TMKDesignCheatSheetDimension *dim = self.portrait;
-    return [[TMKDesignCheatSheetDimension alloc] init:dim.height height:dim.width];
+    TMKDesignCheatSheetDimension *dim = self.portrait.resolution;
+    TMKDesignCheatSheetDimension *rotate = [[TMKDesignCheatSheetDimension alloc] init:dim.height height:dim.width];
+    return [[TMKDesignCheatSheetOrientation alloc] init:rotate];
 }
 
 - (TMKDesignCheatSheetDimension *)iconSize:(TMKIconType)type
@@ -129,7 +147,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
 
 + (TMKDesignCheatSheet *)iPad
 {
-    TMKDesignCheatSheetDimension *dim = self.iPadMini.portrait;
+    TMKDesignCheatSheetDimension *dim = self.iPadMini.portrait.resolution;
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:132 colorTemperature:@"Warm"];
     return [[TMKDesignCheatSheet alloc] init:dim display:display iconWidths:@[@76, @512.0f, @40.0f, @29.0f]];
 }
