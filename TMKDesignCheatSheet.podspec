@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "TMKDesignCheatSheet"
   s.version      = "0.0.1"
-  s.summary      = "A short description of TMKDesignCheatSheet."
+  s.summary      = "Provide resolutions of display, PPI and icon sizes for each devices like iPhone5 and iPhone4/4S"
 
   s.description  = <<-DESC
                    A longer description of TMKDesignCheatSheet in Markdown format.
