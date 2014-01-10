@@ -13,6 +13,7 @@
 typedef NS_ENUM(NSUInteger, TMKUIType) {
     TMKUIType_StatusBar,
     TMKUIType_NavigationBar,
+    TMKUIType_NavigationBar_Landscape,
     TMKUIType_TabBar,
     TMKUIType_Tables,
 };
@@ -36,7 +37,12 @@ typedef NS_ENUM(NSUInteger, TMKUIType) {
 
 - (TMKDesignCheatSheetDimension *)resolution {return _dim;}
 - (CGFloat)statusBarHeight {return [self uiSizeOf:TMKUIType_StatusBar];}
-- (CGFloat)navigationBarHeight {return [self uiSizeOf:TMKUIType_NavigationBar];}
+- (CGFloat)navigationBarHeight
+{
+    if (_orientation == TMKOrientation_Portrait)
+        return [self uiSizeOf:TMKUIType_NavigationBar];
+    return [self uiSizeOf:TMKUIType_NavigationBar_Landscape];
+}
 - (CGFloat)uiSizeOf:(TMKUIType)type
 {
     if (_uiSizes == nil) {

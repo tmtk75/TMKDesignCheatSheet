@@ -78,7 +78,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
+                                     uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPhone4S
@@ -88,7 +88,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @98.f, @640.f]];
+                                     uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPhone4
@@ -110,7 +110,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@152.f, @1024.0f, @80.0f, @58.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @112.f, @640.f]];
+                                     uiSizes:@[@40.0f, @88.0f, @88.f, @112.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPadMini
@@ -120,7 +120,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@76.f, @512.0f, @40.0f, @29.0f]
-                                     uiSizes:@[@20.0f, @44.0f, @56.f, @640.f]];
+                                     uiSizes:@[@20.0f, @44.0f, @44.f, @56.f, @640.f]];
 }
 
 + (TMKDesignCheatSheet *)iPad
@@ -130,7 +130,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@76.f, @512.0f, @40.0f, @29.0f]
-                                     uiSizes:@[@20.0f, @44.0f, @56.f, @640.f]];
+                                     uiSizes:@[@20.0f, @44.0f, @44.f, @56.f, @640.f]];
 }
 
 @end
