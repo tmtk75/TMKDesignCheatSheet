@@ -9,12 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "TMKDesignCheatSheetDimension.h"
-
-
-@interface TMKDesignCheatSheetDisplay : NSObject
-@property (readonly) NSInteger pixelPerInch;
-@property (readonly) NSString *colorTemperature;
-@end
+#import "TMKdesignCheatSheetDisplay.h"
 
 
 @interface TMKDesignCheatSheetOrientation : NSObject

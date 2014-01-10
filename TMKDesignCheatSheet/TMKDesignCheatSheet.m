@@ -9,18 +9,6 @@
 #import "TMKDesignCheatSheet.h"
 #import "TMKDesignCheatSheetDimension.h"
 
-@interface TMKDesignCheatSheetDisplay()
-- (id)init:(NSInteger)ppi colorTemperature:(NSString *)colorTemperature;
-@end
-
-@implementation TMKDesignCheatSheetDisplay
-- (id)init:(NSInteger)ppi colorTemperature:(NSString *)colorTemperature
-{
-    _pixelPerInch = ppi;
-    _colorTemperature = colorTemperature;
-    return self;
-}
-@end
 
 typedef NS_ENUM(NSUInteger, TMKOrientation) {
     TMKOrientation_Portrait,
