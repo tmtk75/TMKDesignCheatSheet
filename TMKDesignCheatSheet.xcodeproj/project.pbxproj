@@ -16,6 +16,7 @@
 		0D8CABF0187CD9090082DDC7 /* libTMKDesignCheatSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8CABD8187CD9090082DDC7 /* libTMKDesignCheatSheet.a */; };
 		0D8CABF6187CD9090082DDC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D8CABF4187CD9090082DDC7 /* InfoPlist.strings */; };
 		0D8CABF8187CD9090082DDC7 /* TMKDesignCheatSheetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CABF7187CD9090082DDC7 /* TMKDesignCheatSheetTests.m */; };
+		0D8CAC06187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CAC05187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		0D8CABF3187CD9090082DDC7 /* TMKDesignCheatSheetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMKDesignCheatSheetTests-Info.plist"; sourceTree = "<group>"; };
 		0D8CABF5187CD9090082DDC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0D8CABF7187CD9090082DDC7 /* TMKDesignCheatSheetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMKDesignCheatSheetTests.m; sourceTree = "<group>"; };
+		0D8CAC04187F761B0082DDC7 /* TMKDesignCheatSheetDimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMKDesignCheatSheetDimension.h; sourceTree = "<group>"; };
+		0D8CAC05187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMKDesignCheatSheetDimension.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 			children = (
 				0D8CABE0187CD9090082DDC7 /* TMKDesignCheatSheet.h */,
 				0D8CABE2187CD9090082DDC7 /* TMKDesignCheatSheet.m */,
+				0D8CAC04187F761B0082DDC7 /* TMKDesignCheatSheetDimension.h */,
+				0D8CAC05187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m */,
 				0D8CABDE187CD9090082DDC7 /* Supporting Files */,
 			);
 			path = TMKDesignCheatSheet;
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8CABE3187CD9090082DDC7 /* TMKDesignCheatSheet.m in Sources */,
+				0D8CAC06187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +415,7 @@
 				0D8CABFD187CD9090082DDC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D8CABFE187CD9090082DDC7 /* Build configuration list for PBXNativeTarget "TMKDesignCheatSheetTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +424,7 @@
 				0D8CAC00187CD9090082DDC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

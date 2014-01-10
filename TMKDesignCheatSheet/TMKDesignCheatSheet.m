@@ -7,19 +7,7 @@
 //
 
 #import "TMKDesignCheatSheet.h"
-
-@interface TMKDesignCheatSheetDimension()
-- (id)init:(CGFloat)width height:(CGFloat)height;
-@end
-
-@implementation TMKDesignCheatSheetDimension
-- (id)init:(CGFloat)width height:(CGFloat)height
-{
-    _width = width;
-    _height = height;
-    return self;
-}
-@end
+#import "TMKDesignCheatSheetDimension.h"
 
 @interface TMKDesignCheatSheetDisplay()
 - (id)init:(NSInteger)ppi colorTemperature:(NSString *)colorTemperature;
