@@ -10,13 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "TMKDesignCheatSheetDimension.h"
 #import "TMKdesignCheatSheetDisplay.h"
-
-
-@interface TMKDesignCheatSheetOrientation : NSObject
-@property (readonly) TMKDesignCheatSheetDimension *resolution;
-@property (readonly) CGFloat statusBarHeight;
-@property (readonly) CGFloat navigationBarHeight;
-@end
+#import "TMKDesignCheatSheetOrientation.h"
 
 
 @interface TMKDesignCheatSheet : NSObject

@@ -18,6 +18,7 @@
 		0D8CABF8187CD9090082DDC7 /* TMKDesignCheatSheetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CABF7187CD9090082DDC7 /* TMKDesignCheatSheetTests.m */; };
 		0D8CAC06187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CAC05187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m */; };
 		0D8CAC09187F772A0082DDC7 /* TMKdesignCheatSheetDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CAC08187F772A0082DDC7 /* TMKdesignCheatSheetDisplay.m */; };
+		0D8CAC0C187F77A00082DDC7 /* TMKDesignCheatSheetOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CAC0B187F77A00082DDC7 /* TMKDesignCheatSheetOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		0D8CAC05187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMKDesignCheatSheetDimension.m; sourceTree = "<group>"; };
 		0D8CAC07187F772A0082DDC7 /* TMKdesignCheatSheetDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMKdesignCheatSheetDisplay.h; sourceTree = "<group>"; };
 		0D8CAC08187F772A0082DDC7 /* TMKdesignCheatSheetDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMKdesignCheatSheetDisplay.m; sourceTree = "<group>"; };
+		0D8CAC0A187F77A00082DDC7 /* TMKDesignCheatSheetOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMKDesignCheatSheetOrientation.h; sourceTree = "<group>"; };
+		0D8CAC0B187F77A00082DDC7 /* TMKDesignCheatSheetOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMKDesignCheatSheetOrientation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				0D8CAC05187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m */,
 				0D8CAC07187F772A0082DDC7 /* TMKdesignCheatSheetDisplay.h */,
 				0D8CAC08187F772A0082DDC7 /* TMKdesignCheatSheetDisplay.m */,
+				0D8CAC0A187F77A00082DDC7 /* TMKDesignCheatSheetOrientation.h */,
+				0D8CAC0B187F77A00082DDC7 /* TMKDesignCheatSheetOrientation.m */,
 				0D8CABDE187CD9090082DDC7 /* Supporting Files */,
 			);
 			path = TMKDesignCheatSheet;
@@ -236,6 +241,7 @@
 			files = (
 				0D8CAC09187F772A0082DDC7 /* TMKdesignCheatSheetDisplay.m in Sources */,
 				0D8CABE3187CD9090082DDC7 /* TMKDesignCheatSheet.m in Sources */,
+				0D8CAC0C187F77A00082DDC7 /* TMKDesignCheatSheetOrientation.m in Sources */,
 				0D8CAC06187F761B0082DDC7 /* TMKDesignCheatSheetDimension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
