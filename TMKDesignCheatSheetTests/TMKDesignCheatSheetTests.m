@@ -194,6 +194,22 @@
     XCTAssertEqual(iPadMini.landscape.tabBarHeight,   56.0f);
     XCTAssertEqual(iPad.portrait.tabBarHeight,        56.0f);
     XCTAssertEqual(iPad.landscape.tabBarHeight,       56.0f);
+
+    // Tables
+    XCTAssertEqual(iPhone5.portrait.tablesWidth,      640.0f);
+    XCTAssertEqual(iPhone5.landscape.tablesWidth,    1136.0f);
+    XCTAssertEqual(iPhone4S.portrait.tablesWidth,     640.0f);
+    XCTAssertEqual(iPhone4S.landscape.tablesWidth,    960.0f);
+    XCTAssertEqual(iPhone4.portrait.tablesWidth,      640.0f);
+    XCTAssertEqual(iPhone4.landscape.tablesWidth,     960.0f);
+    XCTAssert     (iPhone.portrait.tablesWidth  == -1.0f);
+    XCTAssert     (iPhone.landscape.tablesWidth == -1.0f);
+    XCTAssertEqual(iPadRetina.portrait.tablesWidth,  0.0f);
+    XCTAssertEqual(iPadRetina.landscape.tablesWidth, 0.0f);
+    XCTAssertEqual(iPadMini.portrait.tablesWidth,    0.0f);
+    XCTAssertEqual(iPadMini.landscape.tablesWidth,   0.0f);
+    XCTAssertEqual(iPad.portrait.tablesWidth,        0.0f);
+    XCTAssertEqual(iPad.landscape.tablesWidth,       0.0f);
 }
 
 //- (void)test

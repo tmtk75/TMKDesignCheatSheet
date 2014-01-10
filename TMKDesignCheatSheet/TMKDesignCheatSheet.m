@@ -78,7 +78,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f]];
+                                     uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f, @1136.f]];
 }
 
 + (TMKDesignCheatSheet *)iPhone4S
@@ -88,13 +88,15 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@120.0f, @1024.0f, @80.0f, @58.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f]];
+                                     uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f, @960.f]];
 }
 
 + (TMKDesignCheatSheet *)iPhone4
 {
     return self.iPhone4S;
 }
+
+#define TABLES_WIDTH_DYNAMIC (@0.f)
 
 + (TMKDesignCheatSheet *)iPhone
 {
@@ -110,7 +112,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@152.f, @1024.0f, @80.0f, @58.0f]
-                                     uiSizes:@[@40.0f, @88.0f, @88.f, @112.f, @640.f]];
+                                     uiSizes:@[@40.0f, @88.0f, @88.f, @112.f, TABLES_WIDTH_DYNAMIC, TABLES_WIDTH_DYNAMIC]];
 }
 
 + (TMKDesignCheatSheet *)iPadMini
@@ -120,7 +122,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@76.f, @512.0f, @40.0f, @29.0f]
-                                     uiSizes:@[@20.0f, @44.0f, @44.f, @56.f, @640.f]];
+                                     uiSizes:@[@20.0f, @44.0f, @44.f, @56.f, TABLES_WIDTH_DYNAMIC, TABLES_WIDTH_DYNAMIC]];
 }
 
 + (TMKDesignCheatSheet *)iPad
@@ -130,7 +132,7 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     return [[TMKDesignCheatSheet alloc] init:dim
                                      display:display
                                   iconWidths:@[@76.f, @512.0f, @40.0f, @29.0f]
-                                     uiSizes:@[@20.0f, @44.0f, @44.f, @56.f, @640.f]];
+                                     uiSizes:@[@20.0f, @44.0f, @44.f, @56.f, TABLES_WIDTH_DYNAMIC, TABLES_WIDTH_DYNAMIC]];
 }
 
 @end

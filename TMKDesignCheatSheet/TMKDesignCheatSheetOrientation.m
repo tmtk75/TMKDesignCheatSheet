@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, TMKUIType) {
     TMKUIType_NavigationBar_Landscape,
     TMKUIType_TabBar,
     TMKUIType_Tables,
+    TMKUIType_Tables_Landscape,
 };
 
 @interface TMKDesignCheatSheetOrientation()
@@ -55,6 +56,13 @@ typedef NS_ENUM(NSUInteger, TMKUIType) {
 - (CGFloat)tabBarHeight
 {
     return [self uiSizeOf:TMKUIType_TabBar];
+}
+
+- (CGFloat)tablesWidth
+{
+    if (_orientation == TMKOrientation_Portrait)
+        return [self uiSizeOf:TMKUIType_Tables];
+    return [self uiSizeOf:TMKUIType_Tables_Landscape];
 }
 
 - (CGFloat)uiSizeOf:(TMKUIType)type
