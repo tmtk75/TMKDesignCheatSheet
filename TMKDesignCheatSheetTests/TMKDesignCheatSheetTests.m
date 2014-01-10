@@ -154,7 +154,8 @@
     XCTAssertEqual(iPhone4S.landscape.statusBarHeight,   40.0f);
     XCTAssertEqual(iPhone4.portrait.statusBarHeight,     40.0f);
     XCTAssertEqual(iPhone4.landscape.statusBarHeight,    40.0f);
-    XCTAssert     (iPhone.portrait.statusBarHeight == -1.0f);
+    XCTAssert     (iPhone.portrait.statusBarHeight  == -1.0f);
+    XCTAssert     (iPhone.landscape.statusBarHeight == -1.0f);
     XCTAssertEqual(iPadRetina.portrait.statusBarHeight,  40.0f);
     XCTAssertEqual(iPadRetina.landscape.statusBarHeight, 40.0f);
     XCTAssertEqual(iPadMini.portrait.statusBarHeight,    20.0f);
@@ -169,13 +170,30 @@
     XCTAssertEqual(iPhone4S.landscape.navigationBarHeight,   64.0f);
     XCTAssertEqual(iPhone4.portrait.navigationBarHeight,     88.0f);
     XCTAssertEqual(iPhone4.landscape.navigationBarHeight,    64.0f);
-    XCTAssert     (iPhone.portrait.navigationBarHeight == -1.0f);
+    XCTAssert     (iPhone.portrait.navigationBarHeight  == -1.0f);
+    XCTAssert     (iPhone.landscape.navigationBarHeight == -1.0f);
     XCTAssertEqual(iPadRetina.portrait.navigationBarHeight,  88.0f);
     XCTAssertEqual(iPadRetina.landscape.navigationBarHeight, 88.0f);
     XCTAssertEqual(iPadMini.portrait.navigationBarHeight,    44.0f);
     XCTAssertEqual(iPadMini.landscape.navigationBarHeight,   44.0f);
     XCTAssertEqual(iPad.portrait.navigationBarHeight,        44.0f);
     XCTAssertEqual(iPad.landscape.navigationBarHeight,       44.0f);
+
+    // Tab Bar
+    XCTAssertEqual(iPhone5.portrait.tabBarHeight,     98.0f);
+    XCTAssertEqual(iPhone5.landscape.tabBarHeight,    98.0f);
+    XCTAssertEqual(iPhone4S.portrait.tabBarHeight,    98.0f);
+    XCTAssertEqual(iPhone4S.landscape.tabBarHeight,   98.0f);
+    XCTAssertEqual(iPhone4.portrait.tabBarHeight,     98.0f);
+    XCTAssertEqual(iPhone4.landscape.tabBarHeight,    98.0f);
+    XCTAssert     (iPhone.portrait.tabBarHeight  == -1.0f);
+    XCTAssert     (iPhone.landscape.tabBarHeight == -1.0f);
+    XCTAssertEqual(iPadRetina.portrait.tabBarHeight,  112.0f);
+    XCTAssertEqual(iPadRetina.landscape.tabBarHeight, 112.0f);
+    XCTAssertEqual(iPadMini.portrait.tabBarHeight,    56.0f);
+    XCTAssertEqual(iPadMini.landscape.tabBarHeight,   56.0f);
+    XCTAssertEqual(iPad.portrait.tabBarHeight,        56.0f);
+    XCTAssertEqual(iPad.landscape.tabBarHeight,       56.0f);
 }
 
 //- (void)test
