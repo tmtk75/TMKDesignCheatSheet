@@ -32,5 +32,6 @@
 + (TMKDesignCheatSheet *)iPadRetina;
 + (TMKDesignCheatSheet *)iPadMini;
 + (TMKDesignCheatSheet *)iPad;
++ (NSString *)platformRawString;
 
 @end

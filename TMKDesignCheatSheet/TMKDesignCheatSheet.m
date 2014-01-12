@@ -8,7 +8,7 @@
 
 #import "TMKDesignCheatSheet.h"
 #import "TMKDesignCheatSheetDimension.h"
-
+#include <sys/sysctl.h>
 
 typedef NS_ENUM(NSUInteger, TMKIconType) {
     TMKIconType_AppIcon,
@@ -135,4 +135,14 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
                                      uiSizes:@[@20.0f, @44.0f, @44.f, @56.f, TABLES_WIDTH_DYNAMIC, TABLES_WIDTH_DYNAMIC]];
 }
 
++ (NSString *)platformRawString
+{
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithUTF8String:machine];
+    free(machine);
+    return platform;
+}
 @end
