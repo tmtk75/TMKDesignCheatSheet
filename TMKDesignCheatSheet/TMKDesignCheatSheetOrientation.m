@@ -65,6 +65,11 @@ typedef NS_ENUM(NSUInteger, TMKUIType) {
     return [self uiSizeOf:TMKUIType_Tables_Landscape];
 }
 
+- (CGFloat)navigationBarHorizontalMargin
+{
+    return 0.0f;
+}
+
 - (CGFloat)uiSizeOf:(TMKUIType)type
 {
     if (_uiSizes == nil) {

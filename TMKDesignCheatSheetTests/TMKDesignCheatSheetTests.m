@@ -212,6 +212,32 @@
     XCTAssertEqual(iPad.landscape.tablesWidth,       0.0f);
 }
 
+- (void)test
+{
+    TMKDesignCheatSheet *iPhone5    = TMKDesignCheatSheet.iPhone5;
+    TMKDesignCheatSheet *iPhone4S   = TMKDesignCheatSheet.iPhone4S;
+    TMKDesignCheatSheet *iPhone4    = TMKDesignCheatSheet.iPhone4;
+    TMKDesignCheatSheet *iPhone     = TMKDesignCheatSheet.iPhone;
+    TMKDesignCheatSheet *iPadRetina = TMKDesignCheatSheet.iPadRetina;
+    TMKDesignCheatSheet *iPadMini   = TMKDesignCheatSheet.iPadMini;
+    TMKDesignCheatSheet *iPad       = TMKDesignCheatSheet.iPad;
+
+    XCTAssertEqual(iPhone5.portrait.navigationBarHorizontalMargin,     16.0f);
+    XCTAssertEqual(iPhone5.landscape.navigationBarHorizontalMargin,    32.0f);
+    XCTAssertEqual(iPhone4S.portrait.navigationBarHorizontalMargin,     0.0f);
+    XCTAssertEqual(iPhone4S.landscape.navigationBarHorizontalMargin,    0.0f);
+    XCTAssertEqual(iPhone4.portrait.navigationBarHorizontalMargin,      0.0f);
+    XCTAssertEqual(iPhone4.landscape.navigationBarHorizontalMargin,     0.0f);
+    XCTAssertEqual(iPhone.portrait.navigationBarHorizontalMargin,       0.0f);
+    XCTAssertEqual(iPhone.landscape.navigationBarHorizontalMargin,      0.0f);
+    XCTAssertEqual(iPadRetina.portrait.navigationBarHorizontalMargin,   0.0f);
+    XCTAssertEqual(iPadRetina.landscape.navigationBarHorizontalMargin,  0.0f);
+    XCTAssertEqual(iPadMini.portrait.navigationBarHorizontalMargin,     0.0f);
+    XCTAssertEqual(iPadMini.landscape.navigationBarHorizontalMargin,    0.0f);
+    XCTAssertEqual(iPad.portrait.navigationBarHorizontalMargin,         0.0f);
+    XCTAssertEqual(iPad.landscape.navigationBarHorizontalMargin,        0.0f);
+}
+
 //- (void)test
 //{
 //    TMKDesignCheatSheet *iPhone5    = TMKDesignCheatSheet.iPhone5;

@@ -23,5 +23,6 @@ typedef NS_ENUM(NSUInteger, TMKOrientation) {
 @property (readonly) CGFloat navigationBarHeight;
 @property (readonly) CGFloat tabBarHeight;
 @property (readonly) CGFloat tablesWidth;
+@property (readonly) CGFloat navigationBarHorizontalMargin;
 - (id)init:(TMKOrientation)orient resolution:(TMKDesignCheatSheetDimension *)dim uiSizes:(NSArray *)uiSizes;
 @end
