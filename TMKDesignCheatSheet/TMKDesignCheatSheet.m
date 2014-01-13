@@ -70,7 +70,8 @@ typedef NS_ENUM(NSUInteger, TMKIconType) {
     TMKDesignCheatSheetOrientation *orient = [[TMKDesignCheatSheetOrientation alloc]
                                               init:TMKOrientation_Portrait
                                               resolution:[[TMKDesignCheatSheetDimension alloc] init:640.0f height:1136.0f]
-                                              uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f, @1136.f]];
+                                              uiSizes:@[@40.0f, @88.0f, @64.f, @98.f, @640.f, @1136.f]
+                                              navbar:@[@16.0f, @32.0f]];
     TMKDesignCheatSheetDisplay *display = [[TMKDesignCheatSheetDisplay alloc] init:326 colorTemperature:@"Warm"];
     return [[TMKDesignCheatSheet alloc] init:orient
                                      display:display
