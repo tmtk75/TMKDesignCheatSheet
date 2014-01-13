@@ -96,4 +96,11 @@ typedef NS_ENUM(NSUInteger, TMKNavigationBar) {
     }
     return [((NSNumber *)values[kind]) floatValue];
 }
+
+- (TMKDesignCheatSheetOrientation *)rotate
+{
+    TMKOrientation orient= _orientation == TMKOrientation_Portrait ? TMKOrientation_Landscape : TMKOrientation_Portrait;
+    TMKDesignCheatSheetDimension *rotate = [[TMKDesignCheatSheetDimension alloc] init:_dim.height height:_dim.width];
+    return [[TMKDesignCheatSheetOrientation alloc] init:orient resolution:rotate uiSizes:_uiSizes];
+}
 @end
