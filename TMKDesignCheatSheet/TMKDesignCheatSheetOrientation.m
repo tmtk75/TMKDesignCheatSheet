@@ -19,20 +19,32 @@ typedef NS_ENUM(NSUInteger, TMKUIType) {
     TMKUIType_Tables_Landscape,
 };
 
+typedef NS_ENUM(NSUInteger, TMKNavigationBar) {
+    TMKNavigationBar_HorizontalMargin,
+    TMKNavigationBar_HorizontalMargin_Landscape,
+};
+
 @interface TMKDesignCheatSheetOrientation()
 {
     TMKOrientation _orientation;
     TMKDesignCheatSheetDimension *_dim;
     NSArray *_uiSizes;
+    NSArray *_navbar;
 }
 @end
 
 @implementation TMKDesignCheatSheetOrientation
 - (id)init:(TMKOrientation)orient resolution:(TMKDesignCheatSheetDimension *)dim uiSizes:(NSArray *)uiSizes
 {
+    return [self init:orient resolution:dim uiSizes:uiSizes navbar:@[@0.0f, @0.0f]];
+}
+
+- (id)init:(TMKOrientation)orient resolution:(TMKDesignCheatSheetDimension *)dim uiSizes:(NSArray *)uiSizes navbar:(NSArray *)navbar
+{
     _orientation = orient;
     _dim = dim;
     _uiSizes = uiSizes;
+    _navbar = navbar;
     return self;
 }
 
@@ -67,15 +79,21 @@ typedef NS_ENUM(NSUInteger, TMKUIType) {
 
 - (CGFloat)navigationBarHorizontalMargin
 {
-    return 0.0f;
+    if (_orientation == TMKOrientation_Portrait)
+        return  [self floatValue:TMKNavigationBar_HorizontalMargin values:_navbar defval:0.0f];
+    return [self floatValue:TMKNavigationBar_HorizontalMargin_Landscape values:_navbar defval:0.0f];
 }
 
 - (CGFloat)uiSizeOf:(TMKUIType)type
 {
-    if (_uiSizes == nil) {
-        return -1.0f;
+    return  [self floatValue:type values:_uiSizes defval:-1.0f];
+}
+
+- (CGFloat)floatValue:(int)kind values:(NSArray *)values defval:(CGFloat)defval
+{
+    if (values == nil) {
+        return defval;
     }
-    
-    return [((NSNumber *)_uiSizes[type]) floatValue];
+    return [((NSNumber *)values[kind]) floatValue];
 }
 @end
